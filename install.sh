@@ -4,12 +4,16 @@ set -e
 clear
 
 cat << "EOF"
-      ____       _______   _____      __  __           _        _             
-     |  _ \ ___ |__   __| |_   _| __|  \/  | ___   ___| | _____| |_ ___  _ __ 
-     | |_) / _ \   | |      | |  / _` |\/| |/ _ \ / __| |/ / _ \ __/ _ \| '__|
-     |  _ <  __/   | |      | | | (_| |  | | (_) | (__|   <  __/ || (_) | |   
-     |_| \_\___|   |_|      |_|  \__,_|  |_|\___/ \___|_|\_\___|\__\___/|_|   
-        Instalador automático neYTMusic Downloader
+▐▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▌
+▐  ____            _       _     ___           _        _ _            ▌
+▐ / ___|  ___ _ __(_)_ __ | |_  |_ _|_ __  ___| |_ __ _| | | ___ _ __  ▌
+▐ \___ \ / __| '__| | '_ \| __|  | || '_ \/ __| __/ _` | | |/ _ \ '__| ▌
+▐  ___) | (__| |  | | |_) | |_   | || | | \__ \ || (_| | | |  __/ |    ▌
+▐ |____/ \___|_|  |_| .__/ \__| |___|_| |_|___/\__\__,_|_|_|\___|_|    ▌
+▐                   |_|                                                ▌
+▐▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▌
+Script by NeTenebrae: https://github.com/NeTenebraes
+        Instalador automático: neYTMusic Downloader
 EOF
 echo ""
 
@@ -63,4 +67,4 @@ fi
 
 echo ""
 echo "¡Instalación completa!"
-echo "Ejecuta 'neYTMusic' en tu terminal para iniciar (con actualizaciones automáticas integradas)."
+echo "Ejecuta 'neYTMusic' en tu terminal para iniciar."
