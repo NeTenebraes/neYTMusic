@@ -48,6 +48,13 @@ cat << "EOF"
 ██████╔╝╚██████╔╝██║ ╚████║╚███╔███╔╝███████╗╚██████╔╝██║  ██║██████╔╝███████╗██║  ██║
 ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚══╝╚══╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝                                                                                 
 EOF
+UPDATE_MODULE="$HOME/.local/bin/update.sh"
+if [[ -f "$UPDATE_MODULE" ]]; then
+    source "$UPDATE_MODULE"
+    UPDATE_CHECK
+else
+    echo "No se encontró el módulo de actualización ($UPDATE_MODULE)."
+fi
 
 CONFIG_DIR="$HOME/.config/neYTMusic"
 PROXY_FILE="$CONFIG_DIR/proxy"
@@ -142,3 +149,4 @@ case "$do_dl" in
         fi
         ;;
 esac
+ 
