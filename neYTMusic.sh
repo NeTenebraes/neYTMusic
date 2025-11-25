@@ -49,7 +49,7 @@ cat << "EOF"
 ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚══╝╚══╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝                                                                                 
 by: NeTenebrae | https://github.com/NeTenebraes
 EOF
-VERSION_LOCAL="1.0.0"
+VERSION_LOCAL="1.0.1"
 echo "Versión actual: $VERSION_LOCAL"
 
 REPO_SCRIPT="https://raw.githubusercontent.com/NeTenebraes/neYTMusic-Downloader/main/neYTMusic.sh"
@@ -211,4 +211,3 @@ case "$do_dl" in
         fi
         ;;
 esac
-
