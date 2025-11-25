@@ -68,12 +68,13 @@ UPDATE_CHECK() {
     fi
     if [[ "$VERSION_REMOTE" != "$VERSION_LOCAL" && -n "$VERSION_REMOTE" ]]; then
         echo "¡Nueva versión disponible: $VERSION_REMOTE!"
-        echo "Cambios recientes:"
-        if command -v curl &>/dev/null; then
-            curl -fsSL "$CHANGELOG_URL" | head -20
+        echo -e "\nCambios recientes:\n"
+    if command -v curl &>/dev/null; then
+    curl -fsSL "$CHANGELOG_URL" | head -20
         else
-            wget -qO- "$CHANGELOG_URL" | head -20
-        fi
+    wget -qO- "$CHANGELOG_URL" | head -20
+    fi
+    echo -e "\n"
         read -e -p "¿Actualizar ahora el script? [Y/n]: " user_update
         if [[ "$user_update" =~ ^[Yy]$ || -z "$user_update" ]]; then
             if command -v curl &>/dev/null; then
