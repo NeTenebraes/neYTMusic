@@ -7,7 +7,7 @@
 
 neYTMusic es un *script* diseñado para descargar y reproducir música desde **listas de reproducción de YouTube Music**, utilizando las herramientas esenciales `yt-dlp` y `mpv`. Su propósito principal es servir a usuarios en **entornos de ancho de banda limitado** (como *hotspot* o *tethering*), optimizando el consumo de datos al máximo. Automatiza de forma inteligente la descarga, organización y reproducción de música directamente desde la terminal de Linux.
 
-**Integración Recomendada:** Este *script* funciona de manera óptima en conjunto con herramientas de gestión de red como **[tetherfi](https://github.com/pyamsoft/tetherfi)** , asegurando un flujo de trabajo sin interrupciones para escuchar música de forma ilimitada y *offline*.
+**Integración Recomendada:** Este *script* funciona de manera óptima en conjunto con herramientas de gestión de red como **[tetherfi](https://github.com/pyamsoft/tetherfi)**
 
 ## Tabla de Contenidos
 - [Uso Legal y Responsabilidad](#uso-legal-y-responsabilidad)
