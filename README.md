@@ -2,7 +2,7 @@
 [![Debian](https://img.shields.io/badge/Supports-Debian-blue?logo=debian)](https://www.debian.org)
 [![Arch Linux](https://img.shields.io/badge/Supports-Arch%20Linux-brightgreen?logo=arch-linux)](https://archlinux.org)
 [![Fedora](https://img.shields.io/badge/Supports-Fedora-blueviolet?logo=fedora)](https://getfedora.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License: GPL](https://img.shields.io/badge/License-GPL-green.svg)](LICENSE)
 [![Ko-fi](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Ko--fi-red?logo=kofi)](https://ko-fi.com/netenebrae)
 
 neYTMusic es un *script* diseñado para descargar y reproducir música desde **listas de reproducción de YouTube Music**, utilizando las herramientas esenciales `yt-dlp` y `mpv`. Su propósito principal es servir a usuarios en **entornos de ancho de banda limitado** (como *hotspot* o *tethering*), optimizando el consumo de datos al máximo. Automatiza de forma inteligente la descarga, organización y reproducción de música directamente desde la terminal de Linux.
