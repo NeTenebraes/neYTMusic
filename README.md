@@ -22,7 +22,7 @@ neYTMusic es un *script* diseñado para descargar y reproducir música desde **l
 
 neYTMusic no está asociado, respaldado ni afiliado de ninguna forma con Google, YouTube o YouTube Music. El proyecto es independiente y de código abierto, desarrollado para facilitar la descarga de contenido que el usuario pueda reproducir legalmente.
 
-Esta herramienta está diseñada exclusivamente para descarga y reproducción de contenido bajo licencias o condiciones legales que permitan su uso. El usuario es responsable de asegurar que el contenido descargado cumpla con las leyes de derechos de autor y los términos de servicio aplicables.
+Esta herramienta está diseñada exclusivamente para descarga y reproducción de contenido bajo licencias libres de derechos o condiciones legales que permitan su uso. El usuario es responsable de asegurar que el contenido descargado cumpla con las leyes de derechos de autor y los términos de servicio aplicables.
 
 El autor no asume ninguna responsabilidad por el uso incorrecto o ilegal del software ni por infracciones a derechos de autor derivadas del uso del mismo. Para mayor claridad, el software debe usarse únicamente con:
 
