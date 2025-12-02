@@ -44,30 +44,26 @@ by: NeTenebrae | https://github.com/NeTenebraes
 EOF
 VERSION_LOCAL="1.0.1"
 
-REPO_SCRIPT="https://raw.githubusercontent.com/NeTenebraes/neYTMusic-Downloader/main/neYTMusic.sh"
-CHANGELOG_URL="https://raw.githubusercontent.com/NeTenebraes/neYTMusic-Downloader/main/CHANGELOG.md"
+CONFIGDIR="$HOME/.config/neYTMusic"
+MODULESDIR="$CONFIGDIR/Modules"
+PROXY_FILE="$CONFIGDIR/proxy"
+LIST_FILE="$CONFIGDIR/list"
+ARCHIVE="$CONFIGDIR/archive.txt"
 
-CONFIG_DIR="$HOME/.config/neYTMusic"
-MODULES_DIR="$CONFIGDIR/Modules"
-PROXY_FILE="$CONFIG_DIR/proxy"
-LIST_FILE="$CONFIG_DIR/list"
-ARCHIVE="$CONFIG_DIR/archive.txt"
-PROXY=""
-URL=""
-DEST="$HOME/Music/YTMusic"
-
-# Cargar todos los módulos .sh en Modules
-if [ -d "$MODULES_DIR" ]; then
-  for module_script in "$MODULES_DIR"/*.sh; do
-    # Verificar que existan archivos .sh y cargarlos
+# Cargar módulos
+if [ -d "$MODULESDIR" ]; then
+  for module_script in "$MODULESDIR"/*.sh; do
     [ -e "$module_script" ] && source "$module_script"
   done
 fi
 
+PROXY=""
+URL=""
+DEST="$HOME/Music/YTMusic"
+
 echo "Versión actual: $VERSION_LOCAL"
+
 UPDATE_CHECK
-
-
 
 mkdir -p "$CONFIG_DIR"
 mkdir -p "$DEST"
