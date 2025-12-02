@@ -47,6 +47,11 @@ fi
 # Instalar script principal
 SCRIPT_URL="https://raw.githubusercontent.com/NeTenebraes/neYTMusic-Downloader/main/neYTMusic.sh"
 INSTALL_PATH="$HOME/.local/bin/neYTMusic"
+CONFIGDIR="$HOME/.config/neYTMusic"
+MODULES_DIR="$CONFIGDIR/Modules"
+
+mkdir -p "$MODULES_DIR"
+echo "Carpeta Modules creada en $MODULES_DIR"
 
 echo ""
 echo "Descargando 'neYTMusic.sh'..."

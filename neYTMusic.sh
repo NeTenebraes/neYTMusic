@@ -43,75 +43,31 @@ cat << "EOF"
 by: NeTenebrae | https://github.com/NeTenebraes
 EOF
 VERSION_LOCAL="1.0.1"
-echo "Versión actual: $VERSION_LOCAL"
 
 REPO_SCRIPT="https://raw.githubusercontent.com/NeTenebraes/neYTMusic-Downloader/main/neYTMusic.sh"
 CHANGELOG_URL="https://raw.githubusercontent.com/NeTenebraes/neYTMusic-Downloader/main/CHANGELOG.md"
 
-UPDATE_CHECK() {
-    # 1. Verificaciones básicas de conectividad
-    if ! ping -c 1 github.com &>/dev/null; then return; fi
-    
-    # 2. Descargar el script remoto
-    local remote_content
-    if command -v curl &>/dev/null; then
-        remote_content=$(curl -fsSL "$REPO_SCRIPT")
-    else
-        remote_content=$(wget -qO- "$REPO_SCRIPT")
-    fi
-
-    if [[ -z "$remote_content" ]]; then return; fi
-
-    # 3. Calcular HASHES
-    local current_hash
-    current_hash=$(sha256sum "$0" | awk '{print $1}')
-    
-    local remote_hash
-    remote_hash=$(echo "$remote_content" | sha256sum | awk '{print $1}')
-
-    # 4. Comparar
-    if [[ "$current_hash" != "$remote_hash" ]]; then
-        # Extraer versión remota
-        local v_remote=$(echo "$remote_content" | grep "^VERSION_LOCAL=" | head -1 | cut -d'"' -f2)
-        
-        echo -e "\n¡Cambios Detectados!"
-        echo "   Versión del repo: $v_remote"
-        #CHANGELOG
-            echo -e "\nCHANGELOG:"
-    if command -v curl &>/dev/null; then
-        curl -fsSL "$CHANGELOG_URL" \
-        | grep -vE '^# ' \
-        | sed 's/^## //' \
-        | head -20
-    else
-        wget -qO- "$CHANGELOG_URL" \
-        | grep -vE '^# ' \
-        | sed 's/^## //' \
-        | head -20
-    fi
-        echo -e "\n"
-        #Actualización
-        read -e -p "Sincronizar última versión del script? [Y/n]: " user_update
-        if [[ "$user_update" =~ ^[Yy]$ || -z "$user_update" ]]; then
-            echo "$remote_content" > "$0"
-            chmod +x "$0"
-            echo "¡Sincronizado!"
-            exit 0
-        else
-            echo "Omitiendo sincronización..."
-        fi
-    fi
-}
-
-UPDATE_CHECK
-
 CONFIG_DIR="$HOME/.config/neYTMusic"
+MODULES_DIR="$CONFIGDIR/Modules"
 PROXY_FILE="$CONFIG_DIR/proxy"
 LIST_FILE="$CONFIG_DIR/list"
 ARCHIVE="$CONFIG_DIR/archive.txt"
 PROXY=""
 URL=""
 DEST="$HOME/Music/YTMusic"
+
+# Cargar todos los módulos .sh en Modules
+if [ -d "$MODULES_DIR" ]; then
+  for module_script in "$MODULES_DIR"/*.sh; do
+    # Verificar que existan archivos .sh y cargarlos
+    [ -e "$module_script" ] && source "$module_script"
+  done
+fi
+
+echo "Versión actual: $VERSION_LOCAL"
+UPDATE_CHECK
+
+
 
 mkdir -p "$CONFIG_DIR"
 mkdir -p "$DEST"
