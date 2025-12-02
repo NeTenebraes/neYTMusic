@@ -93,5 +93,5 @@ UPDATE_CHECK() {
     done
   fi
 
-  echo -e "\nProceso de actualización completado."
+  echo -e "\nProceso de actualización completado.\n"
 }
